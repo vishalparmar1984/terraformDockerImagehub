@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "demo-vishal-docker-setup"
+    bucket = "demo-vishal-docker-setup1"
     key    = "terraform/terraform.state"
     region = "ap-south-1"
   }
@@ -17,7 +17,7 @@ variable "docker_image" {
 resource "aws_instance" "app" {
   ami           = "ami-0ad21ae1d0696ad58"  # Ubuntu AMI in ap-south-1 region
   instance_type = "t2.micro"
-  key_name      = "logesh"
+  key_name      = "MUMBAI"
 
   user_data = <<-EOF
               #!/bin/bash
